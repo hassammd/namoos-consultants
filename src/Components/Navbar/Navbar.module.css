@@ -64,6 +64,9 @@ nav {
   justify-content: flex-start;
   line-height: 20px;
 }
+.logo img {
+  width: 200px;
+}
 .contact_btn {
   background-color: var(--green-color);
   border: none;
@@ -78,4 +81,58 @@ nav {
 
 .consultants {
   color: var(--green-color);
+}
+.bar_icon {
+  display: none;
+}
+@media screen and (max-width: 1199px) {
+  .logo img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navList {
+    gap: 20px;
+  }
+  .navList li a {
+    font-size: 16px;
+  }
+  .contact_btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact_btn {
+    display: none;
+  }
+  .bar_icon {
+    display: block;
+  }
+  .bar_icon svg {
+    color: var(--secondary-color);
+  }
+  .navList {
+    display: none;
+  }
+
+  .mobileNavList {
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0px;
+    margin-top: 10px;
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  .mobileNavList li a {
+    color: var(--green-color);
+  }
 }

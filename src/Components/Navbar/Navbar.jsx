@@ -6,22 +6,33 @@ import {
 import style from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, Links } from "react-router-dom";
+import logo from "../../assets/headerLogo.png";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const mobileNavHandler = (e) => {
+    e.preventDefault();
+    setIsActive(!isActive);
+  };
+
+  console.log(isActive);
   return (
     <nav>
       <div className="container">
         <div className={style.navbar}>
-          <a href="" className={style.logo}>
-            Namoos Business{" "}
-            <span className={style.consultants}>Consultants</span>
-          </a>
+          <Link className={style.logo}>
+            <img src={logo} alt="" />
+          </Link>
+
           <ul className={style.navList}>
             <li>
               <Link to="">Home</Link>
             </li>
             <li>
-              <Link to="/tax_calculator">Tax Calculators 2024-2025</Link>
+              <Link to="/tax_calculator">Tax Calculators</Link>
             </li>
             <li>
               <a href="">About</a>
@@ -44,8 +55,29 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faTiktok} />
             </li>
           </ul> */}
+          <div className={style.bar_icon} onClick={mobileNavHandler}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
         </div>
       </div>
+      {isActive ? (
+        <ul className={style.mobileNavList}>
+          <li>
+            <Link to="">Home</Link>
+          </li>
+          <li>
+            <Link to="/tax_calculator">Tax Calculators</Link>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Services</a>
+          </li>
+        </ul>
+      ) : (
+        ""
+      )}
     </nav>
   );
 };
