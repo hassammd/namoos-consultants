@@ -37,3 +37,6 @@
 .footer_bottom p {
   color: var(--secondary-color);
 }
+.footer_logo img {
+  width: 200px;
+}

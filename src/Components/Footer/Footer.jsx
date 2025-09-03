@@ -4,6 +4,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
@@ -11,12 +12,12 @@ const Footer = () => {
       <section className={style.footer_section}>
         <div className="container">
           <div className={style.footer_wrapper}>
-            <div>
-              <Link></Link>
+            <div className={style.footer_logo}>
+              <Link>
+                <img src={logo} alt="" />
+              </Link>
             </div>
-            <p>
-              Suit No. 305 3rd Floor, Sadiq Plaza The Mall, Lahore – Pakistan
-            </p>
+            <p>Lahore – Pakistan</p>
             <div className={style.footer_icon}>
               <ul>
                 <li>
