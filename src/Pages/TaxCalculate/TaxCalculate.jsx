@@ -1,6 +1,7 @@
 import style from "./TaxCalculater.module.css";
 import Header from "../../Components/Header/Header";
 import TaxCalculator from "../../Components/TaxCalculator/TaxCalculator";
+import Footer from "../../Components/Footer/Footer";
 
 const TaxCalculate = () => {
   return (
@@ -15,6 +16,8 @@ const TaxCalculate = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

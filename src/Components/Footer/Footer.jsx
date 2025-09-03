@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="container">
           <div className={style.footer_wrapper}>
             <div className={style.footer_logo}>
-              <Link>
+              <Link to="/">
                 <img src={logo} alt="" />
               </Link>
             </div>
@@ -26,10 +26,14 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <Link>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faPhone} />
+                  <Link to="tel:03224600901">
+                    <FontAwesomeIcon icon={faPhone} />
+                  </Link>
                 </li>
               </ul>
             </div>

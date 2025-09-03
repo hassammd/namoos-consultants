@@ -20,7 +20,7 @@ const TaxCalculator = () => {
     let salaryNum = Number(salary);
     console.log(typeof salaryNum);
     let taxRate = 0;
-    if (salary.trim() > 0 && salary <= 50000) {
+    if (salary.trim() >= 0 && salary <= 50000) {
       setNoTax("No Tax Applied");
     } else if (salary >= 500001 && salary <= 100000) {
       taxRate = 2.5;
@@ -105,6 +105,8 @@ const TaxCalculator = () => {
                         <span>{grossSalary.toLocaleString()} PKR</span>
                       </div>
                     </div>
+                  ) : noTax ? (
+                    <span className={style.noTax}>{noTax}</span>
                   ) : (
                     ""
                   )}
@@ -113,7 +115,6 @@ const TaxCalculator = () => {
 
               <div className={style.notification_box}>
                 {error ? <span className={style.error}>{error}</span> : ""}
-                {noTax ? <span className={style.noTax}>{noTax}</span> : ""}
               </div>
             </div>
           </div>
