@@ -1,0 +1,27 @@
+.QuoteSection {
+  padding: 50px 0px;
+  background-color: var(--green-color);
+}
+
+.quote_btn {
+  padding: 15px 30px;
+  border: 0;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-size: 24px;
+  text-transform: capitalize;
+  border-radius: 6px;
+}
+.quote_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quote_wrapper h3 {
+  color: var(--secondary-color);
+}
+.QuoteSection .quote_btn {
+  background-color: var(--secondary-color);
+  color: var(--green-color);
+}

@@ -1,0 +1,115 @@
+.heading_color {
+  color: var(--primary-color);
+}
+.TaxCalculator_section {
+  padding: 120px 0px;
+}
+
+.TaxCalculator_wrapper h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.TaxCalculator_wrapper p {
+  /* margin-bottom: 30px; */
+  text-align: center;
+  color: var(--secondary-color);
+  width: 82%;
+  margin: 0 auto;
+}
+.Calculator {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 40px 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+.Calculator h3 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+.Calculator span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.Calculator form input,
+.Calculator form select {
+  padding: 10px 10px;
+  border: 1px solid #e6e6fa;
+  outline: none;
+  color: #757575;
+}
+.Calculator form input::placeholder {
+  color: #757575;
+}
+.Calculator form select {
+  color: #757575;
+}
+.Calculator button {
+  background-color: var(--green-color);
+  border: none;
+  color: var(--secondary-color);
+  border-radius: 6px;
+  border: 0;
+  padding: 15px 30px;
+  font-weight: 500;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.Calculator form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.Calculator form .salary {
+  width: 47%;
+}
+.Calculator form .salary_month {
+  width: 47%;
+}
+
+.tax_box {
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px;
+
+  margin: 30px auto 0;
+  border: 1px solid #e6e6fa;
+  background-color: var(--green-color);
+  border-radius: 3%;
+}
+.tax_box div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  background-color: #ff00009c;
+  padding: 10px;
+  width: 50%;
+  margin-top: 30px;
+  color: var(--secondary-color);
+  border: 3px solid red;
+}
+.notification_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noTax {
+  background-color: var(--green-color);
+  padding: 10px;
+  width: 50%;
+  margin-top: 30px;
+  color: var(--secondary-color);
+  text-align: center;
+  display: block;
+}
+.Calculator_form_wrapper {
+  display: grid;
+  grid-template-columns: 57.9% 40%;
+  gap: 30px;
+}

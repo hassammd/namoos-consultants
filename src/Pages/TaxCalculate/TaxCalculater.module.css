@@ -1,0 +1,27 @@
+.TaxCalculate {
+  background-color: red;
+  position: relative;
+  background-image: url(/src/assets/calculator_banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 999;
+  height: 100vh;
+  width: auto;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.TaxCalculate::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #203140;
+  z-index: -1;
+  opacity: 80%;
+}
+.TaxCalculate_wrapper {
+  display: flex;
+}
