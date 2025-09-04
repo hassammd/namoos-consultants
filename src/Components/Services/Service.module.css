@@ -27,7 +27,17 @@
   }
   .Services_card {
     display: grid;
-    grid-template-columns: 30.6% 30.6% 30.6%;
+
+    grid-template-columns: repeat(auto-fit, minmax(30.6%, 1fr));
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .Services_section {
+    padding: 70px 0px;
+  }
+  .Services_card {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }

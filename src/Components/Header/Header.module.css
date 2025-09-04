@@ -56,6 +56,24 @@ video {
   text-transform: capitalize;
   border-radius: 6px;
 }
+@media screen and (max-width: 1199px) {
+  .video_wrapper {
+    height: 100vh;
+  }
+  .header_wrapper {
+    width: 100%;
+  }
+  .header_wrapper h1 {
+    font-size: 36px;
+  }
+  .header_wrapper p {
+    width: 70%;
+  }
+  .quote_btn {
+    padding: 13px 27px;
+    font-size: 22px;
+  }
+}
 @media screen and (max-width: 991px) {
   .header_wrapper {
     width: 90%;
@@ -70,8 +88,6 @@ video {
   .video_wrapper {
     height: 80vh;
   }
-
-  /* Achivemnet section */
 }
 
 @media screen and (max-width: 767px) {
@@ -92,16 +108,22 @@ video {
 
 @media screen and (max-width: 575px) {
   .video_wrapper {
-    height: 100vh;
+    height: 50vh;
+  }
+  .logo {
+    width: 90px;
   }
   .header_wrapper h1 {
-    font-size: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
   }
   .header_wrapper p {
-    font-size: 14px;
+    font-size: 12px;
+    width: 100%;
   }
   .quote_btn {
-    padding: 10px 22px;
-    font-size: 18px;
+    padding: 7px 18px;
+    font-size: 14px;
   }
 }

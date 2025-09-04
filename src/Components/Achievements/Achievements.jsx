@@ -23,8 +23,8 @@ const Achievements = () => {
     const countHandler = () => {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
-      const inview = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      if (inview) {
+      // const inview = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      if (rect) {
         let experience = 0;
         let clients = 0;
         let team = 0;
