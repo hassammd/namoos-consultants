@@ -7,7 +7,7 @@ import style from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, Links } from "react-router-dom";
 import logo from "../../assets/headerLogo.png";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -56,7 +56,11 @@ const Navbar = () => {
             </li>
           </ul> */}
           <div className={style.bar_icon} onClick={mobileNavHandler}>
-            <FontAwesomeIcon icon={faBars} />
+            {isActive ? (
+              <FontAwesomeIcon icon={faXmark} />
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
           </div>
         </div>
       </div>

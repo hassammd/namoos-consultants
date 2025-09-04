@@ -1,5 +1,4 @@
 .TaxCalculate {
-  background-color: red;
   position: relative;
   background-image: url(/src/assets/calculator_banner.jpg);
   background-repeat: no-repeat;
@@ -24,4 +23,13 @@
 }
 .TaxCalculate_wrapper {
   display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .TaxCalculate {
+    height: 80vh;
+  }
+  .TaxCalculate::after {
+    height: 80vh;
+  }
 }

@@ -56,3 +56,52 @@ video {
   text-transform: capitalize;
   border-radius: 6px;
 }
+@media screen and (max-width: 991px) {
+  .header_wrapper {
+    width: 90%;
+  }
+  .header_wrapper h1 {
+    font-size: 34px;
+  }
+  .quote_btn {
+    padding: 10px 22px;
+    font-size: 22px;
+  }
+  .video_wrapper {
+    height: 80vh;
+  }
+
+  /* Achivemnet section */
+}
+
+@media screen and (max-width: 767px) {
+  .video_wrapper {
+    height: 60vh;
+  }
+  .header_wrapper h1 {
+    font-size: 30px;
+  }
+  .header_wrapper p {
+    font-size: 14px;
+  }
+  .quote_btn {
+    padding: 10px 22px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .video_wrapper {
+    height: 100vh;
+  }
+  .header_wrapper h1 {
+    font-size: 30px;
+  }
+  .header_wrapper p {
+    font-size: 14px;
+  }
+  .quote_btn {
+    padding: 10px 22px;
+    font-size: 18px;
+  }
+}

@@ -85,6 +85,9 @@ nav {
 .bar_icon {
   display: none;
 }
+.mobileNavList {
+  display: none;
+}
 @media screen and (max-width: 1199px) {
   .logo img {
     width: 150px;

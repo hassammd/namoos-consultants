@@ -120,3 +120,37 @@
   grid-template-columns: 57.9% 40%;
   gap: 30px;
 }
+@media screen and (max-width: 991px) {
+  .TaxCalculator_wrapper h2 {
+    font-size: 34px;
+  }
+  .TaxCalculator_wrapper p {
+    width: 95%;
+  }
+  .TaxCalculator_wrapper h3 {
+    font-size: 18px;
+    font-size: var(--green-color);
+  }
+  .Calculator {
+    padding: 30px 30px;
+  }
+  .Calculator button {
+    padding: 10px 20px;
+  }
+  .Calculator span {
+    width: 100%;
+  }
+  .Calculator_form_wrapper {
+    display: grid;
+    grid-template-columns: 57.9% 37.4%;
+    gap: 30px;
+  }
+  .notification_box {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .TaxCalculator_section {
+    padding: 90px 0px 0px;
+  }
+}

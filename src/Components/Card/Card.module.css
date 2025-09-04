@@ -34,3 +34,13 @@
   font-size: 15px;
   color: green; /* optional: make it green */
 }
+
+@media screen and (max-width: 991px) {
+  .card ul li {
+    font-size: 14px;
+  }
+  .card h4 {
+    text-align: center;
+    width: 100%;
+  }
+}

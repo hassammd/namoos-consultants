@@ -41,3 +41,11 @@
 .footer_logo img {
   width: 200px;
 }
+@media screen and (max-width: 991px) {
+  .footer_section {
+    padding: 90px 0px 70px 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+}

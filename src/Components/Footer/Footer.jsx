@@ -26,7 +26,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link>
+                  <Link to="mailto:ahmadnauman@outlook.com" target="_blank">
                     <FontAwesomeIcon icon={faEnvelope} />
                   </Link>
                 </li>

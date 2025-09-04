@@ -39,3 +39,44 @@
   font-size: 36px;
   font-weight: 700;
 }
+
+@media screen and (max-width: 991px) {
+  .Achievements_section {
+    padding: 90px 0px;
+  }
+  .Achievements_wrapper {
+    flex-wrap: wrap;
+  }
+  .Achievements_card {
+    width: 21.9%;
+    padding: 26px 20px;
+    gap: 15px;
+  }
+  .Achievements_icon {
+    height: 60px;
+    width: 60px;
+  }
+  .Achievements_card span {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .Achievements_card p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Achievements_card {
+    width: 47.2%;
+    padding: 26px 20px;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .Achievements_card {
+    width: 100%;
+    padding: 26px 20px;
+    gap: 15px;
+  }
+}

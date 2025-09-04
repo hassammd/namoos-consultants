@@ -17,3 +17,17 @@
   grid-template-columns: 31.5% 31.5% 31.5%;
   gap: 30px;
 }
+
+@media screen and (max-width: 991px) {
+  .Services_section {
+    padding: 90px 0px;
+  }
+  .services_wrapper h2 {
+    font-size: 24px;
+  }
+  .Services_card {
+    display: grid;
+    grid-template-columns: 30.6% 30.6% 30.6%;
+    gap: 30px;
+  }
+}
