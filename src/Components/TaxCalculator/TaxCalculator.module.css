@@ -9,6 +9,7 @@
   margin-bottom: 30px;
   text-align: center;
   color: var(--secondary-color);
+  text-align: center;
 }
 .TaxCalculator_wrapper p {
   /* margin-bottom: 30px; */
@@ -17,12 +18,7 @@
   width: 82%;
   margin: 0 auto;
 }
-.Calculator {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 40px 40px;
-  width: 100%;
-  margin: 0 auto;
-}
+
 .Calculator h3 {
   margin-bottom: 20px;
   color: var(--secondary-color);
@@ -62,6 +58,9 @@
   font-size: 16px;
   outline: none;
 }
+.tax_box span {
+  color: gray;
+}
 .Calculator form {
   display: flex;
   flex-wrap: wrap;
@@ -80,8 +79,10 @@
   padding: 30px 25px 30px 25px;
   margin: 30px auto 0;
 
-  background-color: var(--green-color);
-  border-radius: 3%;
+  background-color: var(--secondary-color);
+
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .tax_box div:last-child span {
   margin-bottom: 0px;
@@ -121,8 +122,12 @@
   gap: 30px;
 }
 @media screen and (max-width: 991px) {
+  .axCalculator_section .noTax {
+    width: 50%;
+  }
   .TaxCalculator_wrapper h2 {
-    font-size: 34px;
+    font-size: 30px;
+    margin-bottom: 0px;
   }
   .TaxCalculator_wrapper p {
     width: 95%;
@@ -130,6 +135,7 @@
   .TaxCalculator_wrapper h3 {
     font-size: 18px;
     font-size: var(--green-color);
+    margin-bottom: 10px;
   }
   .Calculator {
     padding: 30px 30px;
@@ -142,7 +148,7 @@
   }
   .Calculator_form_wrapper {
     display: grid;
-    grid-template-columns: 57.9% 37.4%;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     gap: 30px;
   }
   .notification_box {
@@ -150,7 +156,49 @@
     text-align: center;
     margin: 0 auto;
   }
+  .Calculator_form_wrapper span {
+    font-size: 14px;
+  }
   .TaxCalculator_section {
     padding: 90px 0px 0px;
+  }
+  .tax_box div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tax_box div span {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .TaxCalculator_section {
+    padding: 0px 0px;
+  }
+  .video_wrapper {
+    max-height: auto;
+  }
+  .TaxCalculator_wrapper {
+    margin-top: 180px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .TaxCalculator_wrapper h2 {
+    font-size: 20px;
+  }
+  .Calculator_form_wrapper form .salary,
+  .Calculator_form_wrapper form .salary_month {
+    width: 100%;
+  }
+  .Calculator {
+    padding: 30px 0px;
+  }
+  .Calculator button {
+    width: 100%;
+  }
+  .Calculator h3,
+  .Calculator span {
+    text-align: center;
   }
 }

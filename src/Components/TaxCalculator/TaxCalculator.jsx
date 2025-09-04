@@ -54,12 +54,6 @@ const TaxCalculator = () => {
               Calculate Tax on Your Salary
               <span className={style.heading_color}> Instantly</span>{" "}
             </h2>
-            <p>
-              Easily calculate your income and salary tax in Pakistan with our
-              FBR-approved online tax calculator. Designed for both individuals
-              and businesses, it provides fast and accurate annual tax estimates
-              in seconds.
-            </p>
 
             <div className={style.Calculator}>
               <div className={style.Calculator_form_wrapper}>

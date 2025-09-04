@@ -21,15 +21,19 @@
   z-index: -1;
   opacity: 80%;
 }
-.TaxCalculate_wrapper {
-  display: flex;
-}
 
 @media screen and (max-width: 991px) {
   .TaxCalculate {
-    height: 80vh;
+    height: 60vh;
   }
-  .TaxCalculate::after {
-    height: 80vh;
+}
+
+@media screen and (max-width: 767px) {
+  .TaxCalculate {
+    max-height: auto;
+  }
+
+  .tax_box {
+    margin-bottom: 30px;
   }
 }

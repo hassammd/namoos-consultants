@@ -138,4 +138,10 @@ nav {
   .mobileNavList li a {
     color: var(--green-color);
   }
+  nav {
+    top: 30px;
+  }
+  .logo img {
+    width: 100px;
+  }
 }
