@@ -1,9 +1,6 @@
 .heading_color {
   color: var(--primary-color);
 }
-.TaxCalculator_section {
-  padding: 378px 0px;
-}
 
 .TaxCalculator_wrapper h2 {
   margin-bottom: 30px;
@@ -121,8 +118,11 @@
   grid-template-columns: 57.9% 40%;
   gap: 30px;
 }
+
+@media screen and (max-width: 1199px) {
+}
 @media screen and (max-width: 991px) {
-  .axCalculator_section .noTax {
+  .TaxCalculator_section .noTax {
     width: 50%;
   }
   .TaxCalculator_wrapper h2 {
@@ -181,6 +181,9 @@
   .TaxCalculator_wrapper {
     margin-top: 180px;
   }
+  .TaxCalculator_section {
+    margin-top: -60px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -200,5 +203,9 @@
   .Calculator h3,
   .Calculator span {
     text-align: center;
+  }
+
+  .TaxCalculator_section {
+    margin-top: -60px;
   }
 }

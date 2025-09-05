@@ -38,6 +38,8 @@
     padding: 70px 0px;
   }
   .Services_card {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    display: grid;
+    grid-template-columns: 80%; /* ek column jo 80% wide ho */
+    justify-content: center; /* column ko center align kare */
   }
 }

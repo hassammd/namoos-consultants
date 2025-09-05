@@ -2,6 +2,7 @@
   position: relative;
   background-image: url(/src/assets/calculator_banner.jpg);
   background-repeat: no-repeat;
+  height: 100vh;
   background-size: cover;
   z-index: 999;
   width: auto;
@@ -20,12 +21,18 @@
   z-index: -1;
   opacity: 80%;
 }
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1400px) {
 }
-
+@media screen and (max-width: 1199px) {
+  .TaxCalculate {
+    height: 80vh;
+  }
+}
 @media screen and (max-width: 767px) {
   .tax_box {
     margin-bottom: 30px;
+  }
+  .TaxCalculate {
+    height: auto;
   }
 }

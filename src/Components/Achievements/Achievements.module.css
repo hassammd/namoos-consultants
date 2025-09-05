@@ -75,8 +75,9 @@
 }
 @media screen and (max-width: 575px) {
   .Achievements_card {
-    width: 100%;
+    width: 80%;
     padding: 26px 20px;
     gap: 15px;
+    margin: 0 auto;
   }
 }
