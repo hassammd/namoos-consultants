@@ -2,7 +2,7 @@
   color: var(--primary-color);
 }
 .TaxCalculator_section {
-  padding: 120px 0px;
+  padding: 378px 0px;
 }
 
 .TaxCalculator_wrapper h2 {
@@ -160,7 +160,7 @@
     font-size: 14px;
   }
   .TaxCalculator_section {
-    padding: 90px 0px 0px;
+    padding: 204px 0px 100px;
   }
   .tax_box div {
     display: flex;

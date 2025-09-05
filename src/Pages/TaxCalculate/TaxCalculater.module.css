@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 999;
-  height: 100vh;
   width: auto;
   background-position: center;
   display: flex;
@@ -23,16 +22,9 @@
 }
 
 @media screen and (max-width: 991px) {
-  .TaxCalculate {
-    height: 60vh;
-  }
 }
 
 @media screen and (max-width: 767px) {
-  .TaxCalculate {
-    max-height: auto;
-  }
-
   .tax_box {
     margin-bottom: 30px;
   }
