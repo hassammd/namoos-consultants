@@ -5,13 +5,29 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import style from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, Links } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/headerLogo.png";
+import blackLogo from "../../assets/logo.png";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const stickyHandler = () => {
+      if (window.scrollY > 10) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener("scroll", stickyHandler);
+    return () => {
+      window.removeEventListener("scroll", stickyHandler);
+    };
+  }, []);
 
   const mobileNavHandler = (e) => {
     e.preventDefault();
@@ -20,19 +36,29 @@ const Navbar = () => {
 
   console.log(isActive);
   return (
-    <nav>
+    <nav className={`${isSticky ? style.sticky : ""}`}>
       <div className="container">
         <div className={style.navbar}>
-          <Link className={style.logo}>
-            <img src={logo} alt="" />
-          </Link>
+          <NavLink className={style.logo}>
+            <img src={`${isSticky ? blackLogo : logo}`} alt="" />
+          </NavLink>
 
           <ul className={style.navList}>
             <li>
-              <Link to="">Home</Link>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? style.active : "")}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/tax_calculator">Tax Calculator</Link>
+              <NavLink
+                to="/tax_calculator"
+                className={({ isActive }) => (isActive ? style.active : "")}
+              >
+                Tax Calculator
+              </NavLink>
             </li>
             <li>
               <a href="">About</a>
@@ -67,10 +93,10 @@ const Navbar = () => {
       {isActive ? (
         <ul className={style.mobileNavList}>
           <li>
-            <Link to="">Home</Link>
+            <NavLink to="">Home</NavLink>
           </li>
           <li>
-            <Link to="/tax_calculator">Tax Calculators</Link>
+            <NavLink to="/tax_calculator">Tax Calculators</NavLink>
           </li>
           <li>
             <a href="">About</a>

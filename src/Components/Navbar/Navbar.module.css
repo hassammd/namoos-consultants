@@ -14,8 +14,23 @@ nav {
   justify-content: space-between;
   width: 100%;
 }
+.navList .active {
+  color: var(--green-color);
+  border-bottom: 2px solid var(--green-color);
+  font-weight: 700;
+}
 .navbar a {
-  color: #ffff;
+  color: var(--secondary-color);
+}
+.sticky {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  padding: 15px;
+}
+.sticky ul li a {
+  color: black;
 }
 .navList {
   list-style: none;

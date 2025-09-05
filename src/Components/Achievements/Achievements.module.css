@@ -39,7 +39,9 @@
   font-size: 36px;
   font-weight: 700;
 }
-
+.Achievements_card {
+  cursor: pointer;
+}
 @media screen and (max-width: 991px) {
   .Achievements_section {
     padding: 90px 0px;
