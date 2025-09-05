@@ -34,7 +34,10 @@ const Navbar = () => {
     setIsActive(!isActive);
   };
 
-  console.log(isActive);
+  //closes mobile nav
+  const closeNav = () => {
+    setIsActive(false);
+  };
   return (
     <nav className={`${isSticky ? style.sticky : ""}`}>
       <div className="container">
@@ -92,10 +95,10 @@ const Navbar = () => {
       </div>
       {isActive ? (
         <ul className={style.mobileNavList}>
-          <li>
+          <li onClick={closeNav}>
             <NavLink to="">Home</NavLink>
           </li>
-          <li>
+          <li onClick={closeNav}>
             <NavLink to="/tax_calculator">Tax Calculators</NavLink>
           </li>
           <li>

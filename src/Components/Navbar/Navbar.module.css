@@ -103,6 +103,7 @@ nav {
 .mobileNavList {
   display: none;
 }
+
 @media screen and (max-width: 1199px) {
   .logo img {
     width: 150px;
@@ -130,7 +131,8 @@ nav {
     display: block;
   }
   .bar_icon svg {
-    color: var(--secondary-color);
+    color: var(--green-color);
+    font-size: 20px;
   }
   .navList {
     display: none;
@@ -151,7 +153,7 @@ nav {
   }
 
   .mobileNavList li a {
-    color: var(--green-color);
+    color: gray;
   }
   nav {
     top: 30px;
