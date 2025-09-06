@@ -58,7 +58,7 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .video_wrapper {
-    height: 100vh;
+    height: auto;
   }
   .header_wrapper {
     width: 100%;
