@@ -64,10 +64,20 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <a href="">About</a>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? style.active : "")}
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <a href="">Services</a>
+              <NavLink
+                to="/services"
+                className={({ isActive }) => (isActive ? style.active : "")}
+              >
+                Services
+              </NavLink>
             </li>
           </ul>
           <div>
@@ -101,8 +111,8 @@ const Navbar = () => {
           <li onClick={closeNav}>
             <NavLink to="/tax_calculator">Tax Calculators</NavLink>
           </li>
-          <li>
-            <a href="">About</a>
+          <li onClick={closeNav}>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
             <a href="">Services</a>

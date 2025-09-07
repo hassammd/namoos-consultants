@@ -5,9 +5,9 @@
   padding: 2rem;
   text-align: center; */
 
-  --primary-color: #28cb75;
+  --primary-color: #00b7c6;
   --secondary-color: #fff;
-  --green-color: #28cb75;
+  --green-color: #00b7c6;
   --gray-color: #f2f6f8;
   --aliceblue-color: #f0f8ff;
 }
@@ -15,6 +15,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Poppins", sans-serif;

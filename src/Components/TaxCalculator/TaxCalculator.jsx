@@ -50,10 +50,10 @@ const TaxCalculator = () => {
       <section className={style.TaxCalculator_section}>
         <div className="container">
           <div className={style.TaxCalculator_wrapper}>
-            <h2>
+            <h1>
               Calculate Tax on Your Salary
-              <span className={style.heading_color}> Instantly</span>{" "}
-            </h2>
+              <span className={style.heading_color}> Instantly</span>
+            </h1>
 
             <div className={style.Calculator}>
               <div className={style.Calculator_form_wrapper}>

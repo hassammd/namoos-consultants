@@ -2,7 +2,7 @@
   color: var(--primary-color);
 }
 
-.TaxCalculator_wrapper h2 {
+.TaxCalculator_wrapper h1 {
   margin-bottom: 30px;
   text-align: center;
   color: var(--secondary-color);
