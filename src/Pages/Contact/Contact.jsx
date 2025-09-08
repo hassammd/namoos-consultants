@@ -14,6 +14,7 @@ const Contact = () => {
   console.log(errors);
 
   const formHander = (e) => {
+    e.preventDefault();
     const errorList = [];
     if (name.trim() === "") {
       errorList.push("Enter Your Name");
@@ -90,7 +91,7 @@ const Contact = () => {
             <input
               type="hidden"
               name="_next"
-              value="https://namoos-consultants.vercel.app/ThankYou"
+              value="namoosbusinessconsultants.netlify.app/ThankYou"
             />
             <input
               type="text"
