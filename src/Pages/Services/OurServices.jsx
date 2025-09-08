@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from "./OurServices.module.css";
+import Footer from "../../Components/Footer/Footer";
 
 const OurServices = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -60,23 +61,24 @@ const OurServices = () => {
       <section className={style.why_chose_section}>
         <div className="container">
           <h2>WHY CHOOSE US?</h2>
-
-          <div className={style.tabs}>
-            {tabs.map((tabs, index) => {
-              return (
-                <>
-                  <button
-                    onClick={() => setActiveTab(index)}
-                    className={style.tab_link}
-                  >
-                    {tabs.title}
-                  </button>
-                </>
-              );
-            })}
-          </div>
-          <div className={style.tab_content}>
-            <p>{tabs[activeTab].content}</p>
+          <div className={style.why_chose_section_wrapper}>
+            <div className={style.tabs}>
+              {tabs.map((tabs, index) => {
+                return (
+                  <>
+                    <button
+                      onClick={() => setActiveTab(index)}
+                      className={style.tab_link}
+                    >
+                      {tabs.title}
+                    </button>
+                  </>
+                );
+              })}
+            </div>
+            <div className={style.tab_content}>
+              <p>{tabs[activeTab].content}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -86,24 +88,28 @@ const OurServices = () => {
       <section className={style.services_section}>
         <div className="container">
           <h2>Our Service</h2>
-
-          <div className={style.services_tab}>
-            {servicesTabs.map((tabs, index) => {
-              return (
-                <button
-                  onClick={() => setServicesTab(index)}
-                  className={style.tab_link}
-                >
-                  {tabs.title}
-                </button>
-              );
-            })}
-          </div>
-          <div>
-            <p>{servicesTabs[servicesTab].content}</p>
+          <div className={style.services_section_wrapper}>
+            <div className={style.services_tab}>
+              {servicesTabs.map((tabs, index) => {
+                return (
+                  <button
+                    onClick={() => setServicesTab(index)}
+                    className={style.tab_link}
+                  >
+                    {tabs.title}
+                  </button>
+                );
+              })}
+            </div>
+            <div className={style.services_tabs_content}>
+              <p>{servicesTabs[servicesTab].content}</p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* footer */}
+      <Footer />
     </>
   );
 };

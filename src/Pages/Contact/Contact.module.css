@@ -1,0 +1,96 @@
+.contact_header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact_header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #203140;
+  z-index: 1;
+  opacity: 80%;
+}
+.contact_header_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.contact_header_wrapper h1 {
+  color: var(--secondary-color);
+}
+
+.map_section {
+  padding: 120px 0px;
+  background-color: var(--aliceblue-color);
+}
+.map_section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form_section {
+  padding: 120px 0px;
+}
+
+.form_section h2,
+p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact_form {
+  position: relative;
+}
+.contact_form .errorlist {
+  color: red;
+  font-size: 14px;
+  position: relative;
+  top: 0;
+  left: 20px;
+}
+.form_section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+.form_section form input {
+  padding: 10px 15px;
+  outline: none;
+  position: relative;
+}
+.form_section form .error {
+  position: absolute;
+  top: 5px;
+  color: red;
+}
+.form_section form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px 15px;
+}
+.submit_btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  border-radius: 6px;
+
+  cursor: pointer;
+}

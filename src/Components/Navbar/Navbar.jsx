@@ -81,7 +81,9 @@ const Navbar = () => {
             </li>
           </ul>
           <div>
-            <button className={style.contact_btn}>Contact Us</button>
+            <NavLink to="/contact">
+              <button className={style.contact_btn}>Contact Us</button>
+            </NavLink>
           </div>
           {/* <ul className={style.Icons_navList}>
             <li>
@@ -114,8 +116,8 @@ const Navbar = () => {
           <li onClick={closeNav}>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
-            <a href="">Services</a>
+          <li onClick={closeNav}>
+            <NavLink to="/services">Services</NavLink>
           </li>
         </ul>
       ) : (

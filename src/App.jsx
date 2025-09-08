@@ -7,6 +7,8 @@ import Layout from "./Components/Layout";
 import About from "./Pages/About/About";
 
 import OurServices from "./Pages/Services/OurServices";
+import Contact from "./Pages/Contact/Contact";
+import ThankYou from "./Pages/ThankYou/ThankYou";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="tax_calculator" element={<TaxCalculate />} />
           <Route path="about" element={<About />} />
           <Route path="services" element={<OurServices />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="thank_you" element={<ThankYou />} />
         </Route>
       </Routes>
     </>
