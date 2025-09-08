@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import style from "./Quote.module.css";
 
 const QuoteSection = () => {
@@ -7,7 +8,9 @@ const QuoteSection = () => {
         <div className="container">
           <div className={style.quote_wrapper}>
             <h3>Request a Quote for our Corporate Services!</h3>
-            <button className={style.quote_btn}>Request a quote</button>
+            <NavLink to="/contact">
+              <button className={style.quote_btn}>Request a quote</button>
+            </NavLink>
           </div>
         </div>
       </section>

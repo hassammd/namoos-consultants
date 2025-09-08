@@ -90,7 +90,7 @@ const Contact = () => {
             <input
               type="hidden"
               name="_next"
-              value="https://namoos-consultants.vercel.app/thank_you"
+              value="https://namoos-consultants.vercel.app/ThankYou"
             />
             <input
               type="text"
@@ -101,7 +101,7 @@ const Contact = () => {
             />
 
             <input
-              type="text"
+              type="email"
               value={email}
               name="Email"
               placeholder="Email*"
@@ -110,7 +110,7 @@ const Contact = () => {
             <input
               type="text"
               value={number}
-              name=" Phone Number"
+              name="PhoneNumber"
               placeholder="Number*"
               onChange={(e) => setNumber(e.target.value)}
             />
