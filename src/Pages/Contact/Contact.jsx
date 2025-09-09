@@ -85,7 +85,7 @@ const Contact = () => {
           <h2>GET IN TOUCH</h2>
           <p>
             For non-emergencies and general enquiries, please fill out the form
-            below. <br /> We’ll respond as soon as possible.
+            below. We’ll respond as soon as possible.
           </p>
 
           <form className={style.contact_form} onSubmit={formHandler}>
@@ -132,9 +132,11 @@ const Contact = () => {
       </section>
       <section className={style.map_section}>
         <div className="container">
-          <h2>Location Map</h2>
-          <div>
-            <LocationMap />
+          <div className={style.map_wrapper}>
+            <h2>Location Map</h2>
+            <div>
+              <LocationMap />
+            </div>
           </div>
         </div>
       </section>
