@@ -91,7 +91,7 @@ const Contact = () => {
             <input
               type="hidden"
               name="_next"
-              value="namoosbusinessconsultants.netlify.app/ThankYou"
+              value="https://namoosbusinessconsultants.netlify.app/ThankYou"
             />
             <input
               type="text"

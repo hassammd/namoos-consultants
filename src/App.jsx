@@ -9,6 +9,7 @@ import About from "./Pages/About/About";
 import OurServices from "./Pages/Services/OurServices";
 import Contact from "./Pages/Contact/Contact";
 import ThankYou from "./Pages/ThankYou/ThankYou";
+import NotFound from "./Pages/404/NotFound";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<OurServices />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="thank_you" element={<ThankYou />} />
+          <Route path="ThankYou" element={<ThankYou />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>
