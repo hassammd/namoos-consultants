@@ -31,7 +31,7 @@ const Contact = () => {
     try {
       // ✅ Send request to FormSubmit
       const res = await fetch(
-        "https://formsubmit.co/ajax/ahmadnauman@outlook.com",
+        "https://formsubmit.co/ajax/hassamautomationchannel@gmail.com",
         {
           method: "POST",
           headers: {
