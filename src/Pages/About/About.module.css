@@ -4,7 +4,7 @@
   background: url(../../assets/about.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: center;
+  background-position: center;
   position: relative;
   z-index: 0;
   display: flex;

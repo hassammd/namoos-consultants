@@ -10,6 +10,8 @@
   --green-color: #00b7c6;
   --gray-color: #f2f6f8;
   --aliceblue-color: #f0f8ff;
+  --blue-color: #203b62;
+  --skyBlue-color: #c6eef8;
 }
 * {
   margin: 0;
@@ -41,4 +43,9 @@ body {
   border-radius: 6px;
   padding: 15px 30px;
   font-weight: 500;
+}
+.Toastify__toast {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  color: #10171d; /* #10171D */
+  font-size: 16px;
 }

@@ -19,10 +19,10 @@
   gap: 30px;
 }
 .Achievements_icon {
-  background-color: var(--primary-color);
+  background-color: var(--skyBlue-color);
   height: 70px;
   width: 70px;
-  color: var(--secondary-color);
+  color: var(--blue-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +38,7 @@
 .Achievements_card span {
   font-size: 36px;
   font-weight: 700;
+  color: var(--blue-color);
 }
 .Achievements_card {
   cursor: pointer;

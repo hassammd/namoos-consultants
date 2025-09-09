@@ -2,45 +2,71 @@ import style from "./Contact.module.css";
 import video from "../../assets/accounts.mp4";
 import LocationMap from "../../Components/LocationMap/LocationMap";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import Footer from "../../Components/Footer/Footer";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
-  const [submitNotification, setSubmitNotification] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const [errors, setErrors] = useState([]);
-  console.log(errors);
+  const navigate = useNavigate();
 
-  const formHander = (e) => {
+  const formHandler = async (e) => {
     e.preventDefault();
-    const errorList = [];
-    if (name.trim() === "") {
-      errorList.push("Enter Your Name");
-    }
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      errorList.push("Enter a valid Email");
-    }
-    const numberPattern = /^[0-9]+$/;
-    if (!numberPattern.test(number)) {
-      errorList.push("Enter Your Number");
-    }
-    if (message.trim() === "") {
-      errorList.push("Enter Your Message");
-    }
-    setErrors(errorList);
-    if (errorList.length > 0) {
-      e.preventDefault();
-    } else {
-      setSubmitNotification("Form Submited");
-      setTimeout(() => {
+
+    // ✅ Form Validation
+    if (!name.trim()) return toast.error("Please enter your name!");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return toast.error("Please enter a valid email!");
+    if (!/^[0-9]+$/.test(number))
+      return toast.error("Please enter a valid phone number!");
+    if (!message.trim()) return toast.error("Please enter your message!");
+
+    setLoading(true);
+
+    try {
+      // ✅ Send request to FormSubmit
+      const res = await fetch(
+        "https://formsubmit.co/ajax/mhassamulqayoum@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            Name: name,
+            Email: email,
+            PhoneNumber: number,
+            Message: message,
+            _subject: "New Contact Form Submission",
+          }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success("Form submitted successfully!");
         setName("");
         setEmail("");
         setNumber("");
         setMessage("");
-      }, 1000);
+
+        // ✅ Instant redirect after success
+        navigate("/ThankYou");
+      } else {
+        toast.error(data.message || "Error submitting form!");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again!");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -54,45 +80,15 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <section className={style.map_section}>
-        <div className="container">
-          <h2>Location Map</h2>
-          <div>
-            <LocationMap />
-          </div>
-        </div>
-      </section>
-
-      <section className={style.form_section}>
+      <section className={style.contact_form_section}>
         <div className="container">
           <h2>GET IN TOUCH</h2>
           <p>
             For non-emergencies and general enquiries, please fill out the form
-            below. We’ll respond as soon as possible.
+            below. <br /> We’ll respond as soon as possible.
           </p>
 
-          <span>{submitNotification}</span>
-          <form
-            action="https://formsubmit.co/mhassamulqayoum@gmail.com"
-            method="POST"
-            className={style.contact_form}
-            onSubmit={formHander}
-          >
-            <ul className={style.errorlist}>
-              {errors.map((items) => {
-                return <li>{items}</li>;
-              })}
-            </ul>
-
-            {/* <!-- Hidden fields --> */}
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://namoosbusinessconsultants.netlify.app/tax_calculator"
-            />
+          <form className={style.contact_form} onSubmit={formHandler}>
             <input
               type="text"
               value={name}
@@ -108,6 +104,7 @@ const Contact = () => {
               placeholder="Email*"
               onChange={(e) => setEmail(e.target.value)}
             />
+
             <input
               type="text"
               value={number}
@@ -115,17 +112,34 @@ const Contact = () => {
               placeholder="Number*"
               onChange={(e) => setNumber(e.target.value)}
             />
+
             <textarea
               name="Message"
-              id=""
               value={message}
               placeholder="Your Message"
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <input type="submit" name="Submit" className={style.submit_btn} />
+
+            <input
+              type="submit"
+              name="Submit"
+              disabled={loading}
+              value={loading ? "Submitting..." : "Submit"}
+              className={style.submit_btn}
+            />
           </form>
         </div>
       </section>
+      <section className={style.map_section}>
+        <div className="container">
+          <h2>Location Map</h2>
+          <div>
+            <LocationMap />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };

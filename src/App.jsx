@@ -14,16 +14,17 @@ import NotFound from "./Pages/404/NotFound";
 function App() {
   return (
     <>
-      <Layout />
       <Routes>
-        <Route>
+        <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="tax_calculator" element={<TaxCalculate />} />
           <Route path="about" element={<About />} />
           <Route path="services" element={<OurServices />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="ThankYou" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
+        </Route>
+        <Route>
+          <Route path="ThankYou" element={<ThankYou />} />
         </Route>
       </Routes>
     </>

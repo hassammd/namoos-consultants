@@ -1,0 +1,114 @@
+.thankyou_header {
+  height: 100vh;
+  /* background: url(../../assets/about.jpg); */
+  background-color: var(--aliceblue-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.thankyou_header_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.thankyou_header_wrapper h1 {
+  text-align: center;
+  color: var(--blue-color);
+}
+.thankyou_header_wrapper p {
+  color: var(--blue-color);
+  margin-bottom: 0px;
+}
+.thankyou_icon_wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  gap: 30px;
+}
+.thankyou_icon_wrapper span {
+  background-color: #c5eff8;
+  height: 120px;
+  width: 120px;
+  font-size: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thankyou_icon_wrapper svg {
+  color: var(--blue-color);
+  font-size: 55px;
+}
+
+.thankyou_icon_wrapper button {
+  padding: 12px 25px;
+  border: 0;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 991px) {
+  .thankyou_header_wrapper h1 {
+    font-size: 42px;
+  }
+  .thankyou_header_wrapper button {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .thankyou_header_wrapper span {
+    height: 100px;
+    width: 100px;
+  }
+  .thankyou_header_wrapper svg {
+    font-size: 42px;
+  }
+  .thankyou_header_wrapper h1 {
+    font-size: 42px;
+  }
+  .thankyou_header_wrapper button {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .thankyou_icon_wrapper {
+    gap: 20px;
+  }
+  .thankyou_header_wrapper span {
+    height: 80px;
+    width: 80px;
+  }
+  .thankyou_header_wrapper svg {
+    font-size: 42px;
+  }
+  .thankyou_header_wrapper h1 {
+    font-size: 30px;
+  }
+  .thankyou_header_wrapper p {
+    font-size: 11px;
+  }
+  .thankyou_header_wrapper button {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+  .thankyou_icon_wrapper button {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}

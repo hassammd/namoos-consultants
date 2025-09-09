@@ -42,13 +42,18 @@ video {
 .map_section h2 {
   text-align: center;
   margin-bottom: 50px;
+  color: var(--blue-color);
 }
 
-.form_section {
+.contact_form_section {
   padding: 120px 0px;
 }
-
-.form_section h2,
+.contact_form_section form {
+  padding: 50px;
+  background-color: var(--skyBlue-color);
+  border-radius: 6px;
+}
+.contact_form_section h2,
 p {
   text-align: center;
   margin-bottom: 50px;
@@ -63,27 +68,33 @@ p {
   top: 0;
   left: 20px;
 }
-.form_section form {
+.contact_form_section form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 50%;
   margin: 0 auto;
 }
-.form_section form input {
+.contact_form_section form input {
   padding: 10px 15px;
   outline: none;
   position: relative;
+  border: none;
+  border-radius: 6px;
 }
-.form_section form .error {
+.contact_form_section h2 {
+  color: var(--blue-color);
+}
+.contact_form_section form .error {
   position: absolute;
   top: 5px;
   color: red;
 }
-.form_section form textarea {
+.contact_form_section form textarea {
   width: 100%;
   height: 150px;
   padding: 10px 15px;
+  border: none;
 }
 .submit_btn {
   background-color: var(--primary-color);
@@ -93,4 +104,11 @@ p {
   border-radius: 6px;
 
   cursor: pointer;
+}
+
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  color: #10171d; /* #10171D */
+  font-size: 0.875rem;
+  background-color: #10171d !important;
 }
