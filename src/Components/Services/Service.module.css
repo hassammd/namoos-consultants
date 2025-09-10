@@ -10,7 +10,7 @@
 .services_wrapper h2 {
   margin-bottom: 30px;
   text-align: center;
-  color: black;
+  color: var(--blue-color);
 }
 .Services_card {
   display: grid;

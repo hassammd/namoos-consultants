@@ -20,6 +20,10 @@
   margin-bottom: 20px;
   color: var(--secondary-color);
 }
+.Calculator h3 .years {
+  display: inline-block;
+  color: var(--primary-color);
+}
 .Calculator span {
   display: block;
   margin-bottom: 20px;
@@ -35,6 +39,7 @@
   outline: none;
   border: none;
   border-radius: 3px;
+  font-family: "Poppins", sans-serif;
 }
 .Calculator form input::placeholder {
   color: #757575;

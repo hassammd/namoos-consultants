@@ -34,6 +34,7 @@
 .why_chose_section h2 {
   text-align: center;
   margin-bottom: 50px;
+  color: var(--blue-color);
 }
 .tabs,
 .services_tab {
@@ -61,6 +62,7 @@
 .services_section h2 {
   text-align: center;
   margin-bottom: 50px;
+  color: var(--blue-color);
 }
 
 @media screen and (max-width: 991px) {

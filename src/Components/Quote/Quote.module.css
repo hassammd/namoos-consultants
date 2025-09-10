@@ -12,6 +12,10 @@
   font-size: 24px;
   text-transform: capitalize;
   border-radius: 6px;
+  transition-duration: 0.3s;
+}
+.quote_btn:hover {
+  transform: translateY(-5px);
 }
 .quote_wrapper {
   display: flex;

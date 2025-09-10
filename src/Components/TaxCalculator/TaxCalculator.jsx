@@ -58,7 +58,10 @@ const TaxCalculator = () => {
             <div className={style.Calculator}>
               <div className={style.Calculator_form_wrapper}>
                 <div>
-                  <h3>Tax Calculator Pakistan 2025-2026</h3>
+                  <h3>
+                    Tax Calculator Pakistan{" "}
+                    <span className={style.years}>2025-2026</span>
+                  </h3>
                   <span>
                     This is latest tax calculator as per 2025-2026 budget
                     presented by government of Pakistan.

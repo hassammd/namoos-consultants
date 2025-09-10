@@ -12,6 +12,14 @@
   display: flex;
   gap: 15px;
 }
+.footer_icon ul li {
+  transition-duration: 0.3s;
+}
+.footer_icon ul li:hover {
+  transform: translateY(-5px);
+  background-color: var(--blue-color);
+}
+
 .footer_wrapper p {
   margin-bottom: 0px;
 }
