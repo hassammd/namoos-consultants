@@ -64,10 +64,25 @@ nav {
   height: 30px;
   width: 30px;
 }
+.navList li {
+  position: relative;
+}
+.navList li::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  padding: 1px 0px;
+  background-color: var(--primary-color);
+}
+.navList li:hover::after {
+  width: 100%;
+  transition: ease-in-out 0.3s;
+}
 .navList li a:hover {
-  border-bottom: 2px solid var(--green-color);
-  color: var(--green-color);
-  transition: all 0.2 ease-in-out;
+  color: var(--primary-color);
+  transition: ease-in-out 0.3s;
 }
 .logo {
   text-transform: uppercase;

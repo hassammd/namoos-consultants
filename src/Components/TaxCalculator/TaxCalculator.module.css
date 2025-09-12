@@ -195,25 +195,36 @@
 }
 
 @media screen and (max-width: 575px) {
-  .TaxCalculator_wrapper h2 {
-    font-size: 20px;
+  .TaxCalculator_wrapper h1 {
+    font-size: 35px;
+    margin-bottom: 0px;
   }
   .Calculator_form_wrapper form .salary,
   .Calculator_form_wrapper form .salary_month {
     width: 100%;
   }
   .Calculator {
-    padding: 30px 0px;
+    padding: 20px 0px;
   }
   .Calculator button {
     width: 100%;
   }
-  .Calculator h3,
+  .Calculator h3 {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
   .Calculator span {
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .TaxCalculator_section {
     margin-top: -60px;
+  }
+  .Calculator form input,
+  .Calculator form select {
+    padding: 10px 10px;
+    font-size: 12px;
   }
 }

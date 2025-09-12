@@ -1,6 +1,53 @@
 import Footer from "../../Components/Footer/Footer";
 import style from "./About.module.css";
+import Understand from "../../assets/Understand.png";
+import strategy from "../../assets/strategy.png";
+import Research from "../../assets/Research.png";
+import implementation from "../../assets/implementation.png";
+import checklist from "../../assets/checklist.png";
+import delivery from "../../assets/delivery.png";
+
 const About = () => {
+  const steps = [
+    {
+      title: "Step 1",
+      heading: "Understand Needs",
+      content:
+        "We listen carefully and analyze your goals, challenges, and requirements",
+      img: Understand,
+    },
+    {
+      title: "Step 2",
+      heading: "Research & Planning",
+      content: "We create a clear and based on our research",
+      img: Research,
+    },
+    {
+      title: "Step 3",
+      heading: "Strategy Development",
+      content: "Define actionable steps to achieve your goals",
+      img: strategy,
+    },
+    {
+      title: "Step 4",
+      heading: "Implementation",
+      content: "Execute the strategy according to the plan",
+      img: implementation,
+    },
+    {
+      title: "Step 5",
+      heading: "Testing & Feedback",
+      content: "Test the solution and gather feedback",
+      img: checklist,
+    },
+    {
+      title: "Step 6",
+      heading: "Delivery & Support",
+      content: "Deliver the final and provide ongoing support",
+      img: delivery,
+    },
+  ];
+
   return (
     <>
       <section className={style.about_section}>
@@ -36,49 +83,24 @@ const About = () => {
           <h2>How We Work</h2>
 
           <div className={style.steps_section}>
-            <div className={style.step_box}>
-              <span>Step 1</span>
-              <h3>Understand Needs</h3>
-              <p>
-                We listen carefully and analyze your goals, challenges, and
-                requirements
-              </p>
-            </div>
-            <div className={style.step_box}>
-              <span>Step 2</span>
-              <h3>Plan & Strategize</h3>
-              <p>A customized roadmap is created to ensure smooth execution</p>
-            </div>
-            <div className={style.step_box}>
-              <span>Step 3</span>
-              <h3>Analyze & Assess</h3>
-              <p>
-                Detailed assessment to identify opportunities, risks, and
-                solutions
-              </p>
-            </div>
-
-            <div className={style.step_box}>
-              <span>Step 4</span>
-              <h3>Report & Recommend</h3>
-              <p>
-                We share transparent reports with actionable insights and
-                advice.
-              </p>
-            </div>
-            <div className={style.step_box}>
-              <span>Step 5</span>
-              <h3>Report & Recommend</h3>
-              <p>
-                We share transparent reports with actionable insights and
-                advice.
-              </p>
-            </div>
-            <div className={style.step_box}>
-              <span>Step 5</span>
-              <h3>Evaluate & Improve</h3>
-              <p>Continuous monitoring to ensure lasting results and growth.</p>
-            </div>
+            {steps.map((items) => {
+              return (
+                <div className={style.step_box}>
+                  <div className={style.step_box_wrapper}>
+                    <div className={style.step_box_wrapper_left}>
+                      <div className={style.step_box_icon_wrapper}>
+                        <img src={items.img} alt="" />
+                      </div>
+                      <span>{items.title}</span>
+                    </div>
+                    <div className={style.step_box_wrapper_right}>
+                      <h3>{items.heading}</h3>
+                      <p>{items.content}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

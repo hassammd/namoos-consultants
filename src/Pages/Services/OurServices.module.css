@@ -85,12 +85,15 @@
     font-size: 30px;
   }
   .services_section_wrapper {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
   }
 
   .tabs {
-    flex-direction: column;
+    flex-direction: row;
+  }
+  .tab_link {
+    padding: 12px 14px;
   }
   .services_section {
     padding: 90px 0px;
@@ -123,7 +126,23 @@
   .services_section h2 {
     font-size: 24px;
   }
+  .tabs {
+    flex-direction: row;
+    margin-bottom: 18px;
+  }
   .tab_link {
+    padding: 14px 15px;
     width: 100%;
+    border-radius: 5px;
+  }
+  .why_chose_section_wrapper {
+    width: 100%;
+  }
+  .tab_content p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .services_tab {
+    flex-direction: row;
   }
 }

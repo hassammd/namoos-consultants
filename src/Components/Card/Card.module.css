@@ -27,6 +27,7 @@
 .card ul li {
   margin-bottom: 10px;
   position: relative;
+  color: #5b5b5b;
 }
 .card ul li::before {
   content: "\f00c"; /* check icon */

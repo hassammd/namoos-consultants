@@ -42,7 +42,7 @@ const Navbar = () => {
     <nav className={`${isSticky ? style.sticky : ""}`}>
       <div className="container">
         <div className={style.navbar}>
-          <NavLink className={style.logo}>
+          <NavLink to="/" className={style.logo}>
             <img src={`${isSticky ? blackLogo : logo}`} alt="" />
           </NavLink>
 
