@@ -79,8 +79,14 @@
   position: relative;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
+.step_box:hover {
+  border: 1px solid var(--primary-color);
+}
 .step_box_icon_wrapper {
   background-color: var(--primary-color);
   height: 66px;
@@ -201,7 +207,9 @@
   }
   .step_box {
     width: 90%;
+    border: 1px solid transparent;
   }
+
   .how_we_word h2 {
     font-size: 24px;
   }
